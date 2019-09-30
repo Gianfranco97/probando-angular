@@ -1,0 +1,14 @@
+<p>Mi nivel: {{ nivel }}</p>
+
+<ng-container *ngIf="nivel < 10; else puerta">
+  <button (click)="subirNivel()">Subir mi  nivel! :D</button>
+</ng-container>
+
+<ng-template #puerta>
+  <button *ngIf="!isVIP" (click)="puertaVIP()">Entrar a la sala VIP</button>
+  <button *ngIf="isVIP" (click)="puertaVIP()">Salir de la sala VIP</button>
+</ng-template>
+
+<ng-container *ngIf="isVIP">
+    <img src="assets/vip.png" alt="VIP">
+</ng-container>
