@@ -1,0 +1,13 @@
+<h1>Hola :D</h1>
+
+<p>Nombre:</p>
+<input type="text" [(ngModel)]="nombre" (ngModelChange)="validador()">
+
+<p>Sexo:</p>
+<select [(ngModel)]="sexo" (ngModelChange)="validador()">
+  <option value="Hombre">Hombre</option>
+  <option value="Mujer">Mujer</option>
+</select>
+
+<br>
+<button style="margin-top: 15px" [disabled]="activarBoton" (click)="saludar()">Saludame!</button>

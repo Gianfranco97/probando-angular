@@ -6,16 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./contador.component.scss']
 })
 export class ContadorComponent {
-
-  constructor() { }
-
   contador:number = 0
 
-  sumar() {
+  sumar(): void {
     this.contador++
   }
 
-  restar() {
+  restar(): void {
     if (this.contador > 0)
       this.contador--
   }

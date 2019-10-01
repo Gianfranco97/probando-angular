@@ -6,17 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./habitacion-vip.component.scss']
 })
 export class HabitacionVipComponent {
-
-  constructor() { }
-
   nivel:number = 0
   isVIP:boolean = false
 
-  subirNivel() {
+  subirNivel(): void {
     if (this.nivel < 10) this.nivel ++
   }
 
-  puertaVIP() {
+  puertaVIP(): void {
     this.isVIP = !this.isVIP
   }
 }
